@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# Starts gpm.
+#
+
+# Make sure the gpm progam exists
+[ -f /usr/sbin/gpm ] || exit 0
+
+start() {
+ 	echo -n "Starting gpm: "
+	/usr/sbin/gpm -m /dev/input/event1 -t evdev2 -R
+	echo "OK"
+}
+stop() {
+	echo -n "Stopping gpm: "
+	/usr/sbin/gpm -k
+	echo "OK"
+}
+restart() {
+	stop
+	start
+}
+
+case "$1" in
+  start)
+  	start
+	;;
+  stop)
+  	stop
+	;;
+  restart|reload)
+  	restart
+	;;
+  *)
+	echo $"Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

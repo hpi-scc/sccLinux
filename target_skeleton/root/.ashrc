@@ -1,0 +1,16 @@
+###########################
+# Set system vars        #
+##########################
+export PS1="\u@`hostname`:\w\> "
+
+##########################
+# Define some aliases    #
+##########################
+
+# Misc
+alias ll="ls -al"
+alias .='source'
+
+#alias ssh="ssh -i /root/.ssh/identity"
+export SDL_NOMOUSE=1
+

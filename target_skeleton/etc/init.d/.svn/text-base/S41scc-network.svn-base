@@ -1,0 +1,113 @@
+#!/bin/sh
+
+CORE=`cat /proc/scc/pid`
+
+# start scc network
+ifconfig mb0 >/dev/null 2>/dev/null
+if [ $? -eq 0 ]
+then
+	## Let's use interrupts ...
+    echo 16384 > /sys/module/sccmb/parameters/mpb_stride
+    # on chip message passing buffer is at 8019:0000 - 801E:FFFF
+    echo "-$((0 - 0x80190000))" > /sys/module/sccmb/parameters/mpb_offset
+    # Size of the Subnet behind the Host IP link. This does not have to reflect normal IP 
+    # routing rules ..
+    SUBNETSIZE=1
+
+    # On Chip IP
+    OCIP=$(expr $CORE + 1)
+
+    # Last Byte of HOST IF IP
+    # HIP=$(expr \( $core / 6 \) \* 8 + \( $core % 6 \) + 1)
+    HIP=$OCIP
+
+    # Last Byte of Router IP
+    RTIP=$(expr \( $CORE / $SUBNETSIZE \) \* $SUBNETSIZE + 1)
+
+    echo "Configuring on-chip network: mb0 (192.168.253.$OCIP R:192.168.253.$RTIP)"
+    RTNUM=$(expr 3232235520 + $RTIP)
+    echo $RTNUM > /sys/module/sccmb/parameters/routerIpAddress
+    ifconfig mb0 192.168.0.$OCIP up
+
+
+     if [ "$OCIP" != "$RTIP" ]
+     then
+        # wait a short while to stop all the cores hammering on rck00
+        sleep `expr 5 + $CORE / 2`
+        # setup the default gateway
+        route add -net 0.0.0.0/0 gw 192.168.0.$RTIP
+     else
+        # enabling IP forwarding
+        echo 1 > /proc/sys/net/ipv4/conf/all/forwarding
+     fi
+fi
+
+PORT=`emactool avail`
+if [ $PORT -eq 0 ] ; then
+   echo "Loading sccpc..."
+   modprobe sccpc 2> /dev/null
+   echo "Configuring host network: pc0 (192.168.1.$HIP)"
+   ifconfig pc0 192.168.1.$HIP
+   route add -net 0.0.0.0/0 gw 192.168.1.254
+   echo "192.168.1.254   rckhost.ex.rck.net rckhost.rck rckhost" >> /etc/hosts
+else
+   modprobe sccemac 2> /dev/null
+   BASEIP=`emactool ip`
+
+   # Set network ports to quadrants depending on numports
+
+   NCORES=48
+
+   NPORTS=`emactool numports`
+   PORT0=`emactool test 0`
+   PORT1=`emactool test 1`
+   PORT2=`emactool test 2`
+   PORT3=`emactool test 3`
+   IDX=0
+
+   NDIV=$(expr $NCORES / $NPORTS)
+   DIV=$(expr $CORE / $NDIV)
+
+   if [ $PORT0 -eq 1 ]
+     then
+       if [ $IDX -eq $DIV ]
+       then
+         DEVPORT=0
+       fi
+			IDX=$(expr $IDX + 1)
+		fi
+
+		if [ $PORT1 -eq 1 ]
+		then
+			if [ $IDX -eq $DIV ]
+			then
+				DEVPORT=1
+			fi
+			IDX=$(expr $IDX + 1)
+		fi
+
+		if [ $PORT2 -eq 1 ]
+		then
+			if [ $IDX -eq $DIV ]
+			then
+				DEVPORT=2
+			fi
+			IDX=$(expr $IDX + 1)
+		fi
+
+		if [ $PORT3 -eq 1 ]
+		then
+			if [ $IDX -eq $DIV ]
+			then
+				DEVPORT=3
+			fi
+			IDX=$(expr $IDX + 1)
+		fi
+
+   IP=${BASEIP%.*}"."$(expr ${BASEIP#*.*.*.} + $CORE)
+   echo "Configuring host network: emac$DEVPORT ($IP)"
+   ifconfig emac$DEVPORT $IP netmask 255.255.255.0
+   route add -net 0.0.0.0/0 gw `emactool gw`
+   echo `emactool host` "   rckhost.ex.rck.net rckhost.rck rckhost" >> /etc/hosts
+   echo "nameserver " `emactool host` >> /etc/resolv.conf
+fi

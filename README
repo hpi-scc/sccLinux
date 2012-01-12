@@ -1,1 +1,34 @@
-SCC Linux Distribution
+1. Configuration
+=================
+a. Install packages: bison flex texinfo libncurses5-dev libncursesw5-dev intltool gpm libXt-dev
+b. Switch to bash as default shell if you are running dash. Ubuntu: sudo dpkg-reconfigure dash
+c. First time: ./configure.sh
+
+2. Configuring SCC-Linux
+=========================
+a. Change to buildroot directory
+b. Make sure that $LD_LIBRARY_PATH is not (!) set and that 
+   your PATH variable doesn't contain "./"...
+c. Setup default configuration: make sccDemo_defconfig
+
+3. Compiling SCC-Linux
+=======================
+a. Change to buildroot directory
+b. Start compiling: make
+
+4. Change configuration settings
+=================================
+Once you were able to build the default image, you can modify the configurations:
+a. Buildroot settings: make menuconfig
+b. Crosstool compiler: make ctng-menuconfig
+c. Linux kernel:       make linux-menuconfig
+d. Busybox setup:      make busybox-menuconfig
+
+5. Compile own programs
+========================
+You can compile your own programs with the Crosstool that has been created
+during initial make:
+  > setenv PATH "${PATH}:<this folder>/buildroot-201X.XX/output/host/usr/bin/"
+  > make CC=i586-unknown-linux-gnu-gcc
+    <or>
+  > make CROSS_COMPILE=i586-unknown-linux-gnu-

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/il/mpr/mrl/scc/public/!svn/ver/531/software/trunk/sccLinux/target_skeleton/etc/init.d
+END
+S40network
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/il/mpr/mrl/scc/public/!svn/ver/483/software/trunk/sccLinux/target_skeleton/etc/init.d/S40network
+END
+S55gpm
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/il/mpr/mrl/scc/public/!svn/ver/475/software/trunk/sccLinux/target_skeleton/etc/init.d/S55gpm
+END
+S45rhid
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/il/mpr/mrl/scc/public/!svn/ver/475/software/trunk/sccLinux/target_skeleton/etc/init.d/S45rhid
+END
+S02hostname
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/il/mpr/mrl/scc/public/!svn/ver/483/software/trunk/sccLinux/target_skeleton/etc/init.d/S02hostname
+END
+S01hotplug
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/il/mpr/mrl/scc/public/!svn/ver/483/software/trunk/sccLinux/target_skeleton/etc/init.d/S01hotplug
+END
+S41scc-network
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/il/mpr/mrl/scc/public/!svn/ver/531/software/trunk/sccLinux/target_skeleton/etc/init.d/S41scc-network
+END
+rcS
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/il/mpr/mrl/scc/public/!svn/ver/493/software/trunk/sccLinux/target_skeleton/etc/init.d/rcS
+END
+S09klog
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/il/mpr/mrl/scc/public/!svn/ver/483/software/trunk/sccLinux/target_skeleton/etc/init.d/S09klog
+END
+S20urandom
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/il/mpr/mrl/scc/public/!svn/ver/483/software/trunk/sccLinux/target_skeleton/etc/init.d/S20urandom
+END
+S08syslog
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/il/mpr/mrl/scc/public/!svn/ver/483/software/trunk/sccLinux/target_skeleton/etc/init.d/S08syslog
+END
+S42mount
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/il/mpr/mrl/scc/public/!svn/ver/483/software/trunk/sccLinux/target_skeleton/etc/init.d/S42mount
+END
