@@ -14,6 +14,11 @@ if [ ! -f $BUILDROOT_FILE ]; then
 	wget http://buildroot.uclibc.org/downloads/${BUILDROOT_FILE}
 fi
 
+# Fetch kernel patch and sccApps...
+echo "Fetching git submodules..."
+git submodule init
+git submodule update
+
 # Extract
 echo "Extracting..."
 tar xf ${BUILDROOT_FILE}
