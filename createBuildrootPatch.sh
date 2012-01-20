@@ -6,6 +6,11 @@ BUILDROOT=buildroot-${BUILDROOT_VERSION}
 BUILDROOT_FILE=${BUILDROOT}.tar.bz2
 BUILDROOT_PATCH=${BUILDROOT}-scc.patch
 
+if [ ! -d $BUILDROOT ]; then
+  echo "Please execute \"./configure.sh\" first... Aborting!"
+  exit
+fi
+
 if [ $1 == "--diff" ]; then
   echo Finding out changes compared to existing patch!
   cat patches/buildroot-2011.11-scc.patch | grep -v '^+++' | grep -v '^---' > existingPatch
