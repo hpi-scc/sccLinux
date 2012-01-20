@@ -1,6 +1,6 @@
 [submodule "apps"]
 	path = apps
-	url = git@github.com:hpi-scc/sccApps.git
+	url = git://github.com/hpi-scc/sccApps
 [submodule "kernel-patches"]
 	path = kernel-patches
-	url = git@github.com:hpi-scc/linux-kernel-patches.git
+	url = git://github.com/hpi-scc/linux-kernel-patches

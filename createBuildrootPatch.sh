@@ -16,7 +16,7 @@ fi
 if [ $1 == "--diff" ]; then
   echo Finding out changes compared to existing patch!
   cat patches/${BUILDROOT}-scc.patch | grep -v '^+++' | grep -v '^+++' | grep -v '^---' > existingPatch
-  createBuildrootPatch.sh tmpPiggy > /dev/null
+  ./createBuildrootPatch.sh tmpPiggy > /dev/null
   cat tmpPiggy | grep -v '^+++' | grep -v '^---' > newPatch
   tkdiff existingPatch newPatch
   rm -f tmpPiggy existingPatch newPatch
