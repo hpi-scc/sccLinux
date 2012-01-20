@@ -1,45 +1,41 @@
-diff -urN buildroot-2011.05.orig/bin2obj/bin2obj.c buildroot-2011.05/bin2obj/bin2obj.c
-diff -urN buildroot-2011.05.orig/bin2obj/Makefile buildroot-2011.05/bin2obj/Makefile
-diff -urN buildroot-2011.05.orig/selfboot/fastBoot.mt buildroot-2011.05/selfboot/fastBoot.mt
-diff -urN buildroot-2011.05.orig/selfboot/fastBoot.obj buildroot-2011.05/selfboot/fastBoot.obj
-diff -urN buildroot-2011.05.orig/selfboot/linux.mt buildroot-2011.05/selfboot/linux.mt
-diff -urN buildroot-2011.05.orig/selfboot/preMergeImage.csh buildroot-2011.05/selfboot/preMergeImage.csh
-diff -urN buildroot-2011.05.orig/board/intel/scc/Config.in buildroot-2011.05/board/intel/scc/Config.in
-diff -urN buildroot-2011.05.orig/board/intel/scc/crosstool-ng.config buildroot-2011.05/board/intel/scc/crosstool-ng.config
-diff -urN buildroot-2011.05.orig/board/intel/scc/device_table.txt buildroot-2011.05/board/intel/scc/device_table.txt
-diff -urN buildroot-2011.05.orig/board/intel/scc/kernel-patches/linux-2.6.38-100-scc.patch buildroot-2011.05/board/intel/scc/kernel-patches/linux-2.6.38-100-scc.patch
-diff -urN buildroot-2011.05.orig/board/intel/scc/linux-2.6.37.config buildroot-2011.05/board/intel/scc/linux-2.6.37.config
-diff -urN buildroot-2011.05.orig/board/intel/scc/linux-2.6.38.config buildroot-2011.05/board/intel/scc/linux-2.6.38.config
-diff -urN buildroot-2011.05.orig/board/intel/scc/Makefile.in buildroot-2011.05/board/intel/scc/Makefile.in
-diff -urN buildroot-2011.05.orig/boot/Config.in buildroot-2011.05/boot/Config.in
-diff -urN buildroot-2011.05.orig/boot/sccboot/Config.in buildroot-2011.05/boot/sccboot/Config.in
-diff -urN buildroot-2011.05.orig/boot/sccboot/sccboot.mk buildroot-2011.05/boot/sccboot/sccboot.mk
-diff -urN buildroot-2011.05.orig/configs/scc_defconfig buildroot-2011.05/configs/scc_defconfig
-diff -urN buildroot-2011.05.orig/configs/sccDemo_defconfig buildroot-2011.05/configs/sccDemo_defconfig
-diff -urN buildroot-2011.05.orig/fs/Config.in buildroot-2011.05/fs/Config.in
-diff -urN buildroot-2011.05.orig/fs/sccfs/Config.in buildroot-2011.05/fs/sccfs/Config.in
-diff -urN buildroot-2011.05.orig/fs/sccfs/sccfs.mk buildroot-2011.05/fs/sccfs/sccfs.mk
-diff -urN buildroot-2011.05.orig/images/commandline.bin buildroot-2011.05/images/commandline.bin
-diff -urN buildroot-2011.05.orig/package/Config.in buildroot-2011.05/package/Config.in
-diff -urN buildroot-2011.05.orig/package/libtool/libtool.mk buildroot-2011.05/package/libtool/libtool.mk
-diff -urN buildroot-2011.05.orig/package/links/Config.in buildroot-2011.05/package/links/Config.in
-diff -urN buildroot-2011.05.orig/package/links/links.mk buildroot-2011.05/package/links/links.mk
-diff -urN buildroot-2011.05.orig/package/ncurses/Config.in buildroot-2011.05/package/ncurses/Config.in
-diff -urN buildroot-2011.05.orig/package/ncurses/ncurses.mk buildroot-2011.05/package/ncurses/ncurses.mk
-diff -urN buildroot-2011.05.orig/package/ncurses/ncurses/Makefile.patch buildroot-2011.05/package/ncurses/ncurses/Makefile.patch
-diff -urN buildroot-2011.05.orig/package/scc/Config.in buildroot-2011.05/package/scc/Config.in
-diff -urN buildroot-2011.05.orig/package/scc/gpm/Config.in buildroot-2011.05/package/scc/gpm/Config.in
-diff -urN buildroot-2011.05.orig/package/scc/gpm/gpm.mk buildroot-2011.05/package/scc/gpm/gpm.mk
-diff -urN buildroot-2011.05.orig/package/scc/pulseaudio/Config.in buildroot-2011.05/package/scc/pulseaudio/Config.in
-diff -urN buildroot-2011.05.orig/package/scc/pulseaudio/pulseaudio.mk buildroot-2011.05/package/scc/pulseaudio/pulseaudio.mk
-diff -urN buildroot-2011.05.orig/package/scc/rckapps/Config.in buildroot-2011.05/package/scc/rckapps/Config.in
-diff -urN buildroot-2011.05.orig/package/scc/rckapps/rckapps.mk buildroot-2011.05/package/scc/rckapps/rckapps.mk
-diff -urN buildroot-2011.05.orig/package/scc/rhid/Config.in buildroot-2011.05/package/scc/rhid/Config.in
-diff -urN buildroot-2011.05.orig/package/scc/rhid/rhid.mk buildroot-2011.05/package/scc/rhid/rhid.mk
-diff -urN buildroot-2011.05.orig/package/scc/scc.mk buildroot-2011.05/package/scc/scc.mk
-diff -urN buildroot-2011.05.orig/package/scc/usbip/Config.in buildroot-2011.05/package/scc/usbip/Config.in
-diff -urN buildroot-2011.05.orig/package/scc/usbip/usbip.mk buildroot-2011.05/package/scc/usbip/usbip.mk
-diff -urN buildroot-2011.05.orig/package/scc/imaze/Config.in buildroot-2011.05/package/scc/imaze/Config.in
-diff -urN buildroot-2011.05.orig/package/scc/imaze/imaze.mk buildroot-2011.05/package/scc/imaze/imaze.mk
-diff -urN buildroot-2011.05.orig/board/intel/scc/busybox-1.18.4.config buildroot-2011.05/board/intel/scc/busybox-1.18.4.config
-diff -urN buildroot-2011.05.orig/toolchain/toolchain-crosstool-ng/crosstool-ng.mk buildroot-2011.05/toolchain/toolchain-crosstool-ng/crosstool-ng.mk
+#!/bin/bash
+
+BUILDROOT_VERSION=2011.11
+
+BUILDROOT=buildroot-${BUILDROOT_VERSION}
+BUILDROOT_FILE=${BUILDROOT}.tar.bz2
+BUILDROOT_PATCH=${BUILDROOT}-scc.patch
+
+if [ $1 == "--diff" ]; then
+  echo Finding out changes compared to existing patch!
+  cat patches/buildroot-2011.11-scc.patch | grep -v '^+++' | grep -v '^---' > existingPatch
+  createBuildrootPatch.sh tmpPiggy
+  cat tmpPiggy | grep -v '^+++' | grep -v '^---' > newPatch
+  tkdiff existingPatch newPatch
+  rm -f tmpPiggy existingPatch newPatch
+elif [ $1 == "--apply" ]; then
+  echo "Writing patch file \"patches/${BUILDROOT}-scc.patch\"..."
+  echo "=> During the process you'll get 6 errors about missing files in"
+  echo "   \"${BUILDROOT}*/fs/skeleton\" which are okay..."
+  diff -urN ${BUILDROOT}.orig ${BUILDROOT} > patches/${BUILDROOT}-scc.patch
+elif [ "$1" == "" ] || echo $1 | grep -q '^-'; then
+  echo "Usage: $0 [options] "
+  echo "       $0 file"
+  echo ""
+  echo "Options:"
+  echo "--diff    Show the differences between the buildroot folder and the"
+  echo "          patch-file \"patches/${BUILDROOT}-scc.patch\""
+  echo "--apply   Apply all changes in the buildroot folder to the patch-file"
+  echo "          \"patches/${BUILDROOT}-scc.patch\". Use --diff option to"
+  echo "          find out what changes have been made..."
+  echo "-h/--help Show this help text..."
+  echo ""
+  echo "If no options are given, you may provide a filename. The new buidroot"
+  echo "patchfile will be created (compared to buildroot-${BUILDROOT_VERSION}.orig)"
+  echo "and stored under the give filename."
+else
+  echo "Writing patch file \"$1\"..."
+  echo "=> During the process you'll get 6 errors about missing files in"
+  echo "   \"${BUILDROOT}*/fs/skeleton\" which are okay..."
+ diff -urN ${BUILDROOT}.orig ${BUILDROOT} > $1 
+fi
