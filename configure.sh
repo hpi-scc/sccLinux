@@ -1,13 +1,12 @@
 #!/bin/bash
 
-VERSION=2011.11
+BUILDROOT_VERSION=2011.11
+KERNEL_VERSION=3.1.4-100
 
-BUILDROOT=buildroot-${VERSION}
+BUILDROOT=buildroot-${BUILDROOT_VERSION}
 BUILDROOT_FILE=${BUILDROOT}.tar.bz2
-PATCH_FILE=${BUILDROOT}-scc.patch
-
-# "Source" sccApps
-ln -fs ../sccApps apps
+BUILDROOT_PATCH=${BUILDROOT}-scc.patch
+KERNEL_PATCH=linux-${BUILDROOT_VERSION}-scc.patch
 
 # Download
 if [ ! -f $BUILDROOT_FILE ]; then
@@ -20,8 +19,11 @@ echo "Extracting..."
 tar xf ${BUILDROOT_FILE}
 cp -R ${BUILDROOT} ${BUILDROOT}.orig
 
-echo "Applying patch file ${PATCH_FILE}"
-patch -d ${BUILDROOT} -p1 < patches/${PATCH_FILE}
+echo "Applying patch file ${BUILDROOT_PATCH}"
+patch -d ${BUILDROOT} -p1 < patches/${BUILDROOT_PATCH}
+
+echo "Copying the kernel patch file ${KERNEL_PATCH}"
+cp linux-kernel-patches/${KERNEL_PATCH} ${BUILDROOT}/board/intel/scc/kernel-patches/
 
 echo "Copying binary files..."
 cp -a target_skeleton ${BUILDROOT}/board/intel/scc >& /dev/null
