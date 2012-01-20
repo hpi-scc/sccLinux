@@ -23,7 +23,7 @@ echo "Applying patch file ${BUILDROOT_PATCH}"
 patch -d ${BUILDROOT} -p1 < patches/${BUILDROOT_PATCH}
 
 echo "Copying the kernel patch file ${KERNEL_PATCH}"
-cp linux-kernel-patches/${KERNEL_PATCH} ${BUILDROOT}/board/intel/scc/kernel-patches/
+ln -s `pwd`/kernel-patches/${KERNEL_PATCH} ${BUILDROOT}/board/intel/scc/
 
 echo "Copying binary files..."
 cp -a target_skeleton ${BUILDROOT}/board/intel/scc >& /dev/null

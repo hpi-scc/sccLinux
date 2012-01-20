@@ -1,6 +1,5 @@
-diff -urN buildroot-2011.11.orig/bin2obj/bin2obj.c buildroot-2011.11/bin2obj/bin2obj.c
 --- buildroot-2011.11.orig/bin2obj/bin2obj.c	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/bin2obj/bin2obj.c	2012-01-20 13:21:19.528253032 +0100
++++ buildroot-2011.11/bin2obj/bin2obj.c	2012-01-20 13:27:40.998267234 +0100
 @@ -0,0 +1,147 @@
 +#include <stdio.h>
 +#include <getopt.h>
@@ -149,9 +148,8 @@ diff -urN buildroot-2011.11.orig/bin2obj/bin2obj.c buildroot-2011.11/bin2obj/bin
 +
 +  return retval;
 +}
-diff -urN buildroot-2011.11.orig/bin2obj/Makefile buildroot-2011.11/bin2obj/Makefile
 --- buildroot-2011.11.orig/bin2obj/Makefile	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/bin2obj/Makefile	2012-01-20 13:21:19.528253032 +0100
++++ buildroot-2011.11/bin2obj/Makefile	2012-01-20 13:27:40.998267234 +0100
 @@ -0,0 +1,10 @@
 +CC = gcc
 +CFLAGS = -Wall -O3 
@@ -163,9 +161,8 @@ diff -urN buildroot-2011.11.orig/bin2obj/Makefile buildroot-2011.11/bin2obj/Make
 +clean:
 +	rm -f $(TARGETS) *.o *~
 +
-diff -urN buildroot-2011.11.orig/board/intel/scc/busybox-1.18.4.config buildroot-2011.11/board/intel/scc/busybox-1.18.4.config
 --- buildroot-2011.11.orig/board/intel/scc/busybox-1.18.4.config	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/busybox-1.18.4.config	2012-01-20 13:21:19.528253032 +0100
++++ buildroot-2011.11/board/intel/scc/busybox-1.18.4.config	2012-01-20 13:27:40.998267234 +0100
 @@ -0,0 +1,986 @@
 +#
 +# Automatically generated make config: don't edit
@@ -1153,9 +1150,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/busybox-1.18.4.config buildroot
 +CONFIG_KLOGD=y
 +CONFIG_FEATURE_KLOGD_KLOGCTL=y
 +CONFIG_LOGGER=y
-diff -urN buildroot-2011.11.orig/board/intel/scc/Config.in buildroot-2011.11/board/intel/scc/Config.in
 --- buildroot-2011.11.orig/board/intel/scc/Config.in	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/Config.in	2012-01-20 13:21:19.528253032 +0100
++++ buildroot-2011.11/board/intel/scc/Config.in	2012-01-20 13:27:40.998267234 +0100
 @@ -0,0 +1,26 @@
 +menuconfig BR2_TARGET_SCC
 +	bool "Single-chip cloud computer Board"
@@ -1183,9 +1179,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/Config.in buildroot-2011.11/boa
 +
 +endif
 +
-diff -urN buildroot-2011.11.orig/board/intel/scc/crosstool-ng.config buildroot-2011.11/board/intel/scc/crosstool-ng.config
 --- buildroot-2011.11.orig/board/intel/scc/crosstool-ng.config	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/crosstool-ng.config	2012-01-20 13:21:19.528253032 +0100
++++ buildroot-2011.11/board/intel/scc/crosstool-ng.config	2012-01-20 13:27:40.998267234 +0100
 @@ -0,0 +1,426 @@
 +#
 +# Automatically generated make config: don't edit
@@ -1613,9 +1608,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/crosstool-ng.config buildroot-2
 +# Test suite
 +#
 +# CT_TEST_SUITE_GCC is not set
-diff -urN buildroot-2011.11.orig/board/intel/scc/device_table.txt buildroot-2011.11/board/intel/scc/device_table.txt
 --- buildroot-2011.11.orig/board/intel/scc/device_table.txt	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/device_table.txt	2012-01-20 13:21:19.528253032 +0100
++++ buildroot-2011.11/board/intel/scc/device_table.txt	2012-01-20 13:27:40.998267234 +0100
 @@ -0,0 +1,86 @@
 +# When building a target filesystem, it is desirable to not have to become
 +# root and then run 'mknod' a thousand times. Using a device table you can
@@ -1703,9 +1697,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/device_table.txt buildroot-2011
 +/usr/share/games/imaze  	f	755	0	0	-	-	-	-	-
 +/usr/bin/imaze			f	755	0	0	-	-	-	-	-
 +/usr/games			f	755	0	0	-	-	-	-	-
-diff -urN buildroot-2011.11.orig/board/intel/scc/linux-3.1.4.config buildroot-2011.11/board/intel/scc/linux-3.1.4.config
 --- buildroot-2011.11.orig/board/intel/scc/linux-3.1.4.config	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/linux-3.1.4.config	2012-01-20 13:21:19.538262494 +0100
++++ buildroot-2011.11/board/intel/scc/linux-3.1.4.config	2012-01-20 13:27:40.998267234 +0100
 @@ -0,0 +1,1127 @@
 +#
 +# Automatically generated file; DO NOT EDIT.
@@ -2834,18 +2827,16 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/linux-3.1.4.config buildroot-20
 +CONFIG_CPU_RMAP=y
 +CONFIG_NLATTR=y
 +# CONFIG_AVERAGE is not set
-diff -urN buildroot-2011.11.orig/board/intel/scc/Makefile.in buildroot-2011.11/board/intel/scc/Makefile.in
 --- buildroot-2011.11.orig/board/intel/scc/Makefile.in	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/Makefile.in	2012-01-20 13:21:19.538262494 +0100
++++ buildroot-2011.11/board/intel/scc/Makefile.in	2012-01-20 13:27:40.998267234 +0100
 @@ -0,0 +1,5 @@
 +ifeq ($(BR2_TARGET_SCC),y)
 +SCC_PATH= target/device/scc
 +
 +TARGET_SKELETON=$(SCC_PATH)/target_skeleton
 +endif
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/banner buildroot-2011.11/board/intel/scc/target_skeleton/etc/banner
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/banner	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/banner	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/banner	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,10 @@
 +
 +
@@ -2857,14 +2848,12 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/banner buil
 +                                             
 +
 +
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/br-version buildroot-2011.11/board/intel/scc/target_skeleton/etc/br-version
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/br-version	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/br-version	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/br-version	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1 @@
 +2010.11
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/fstab buildroot-2011.11/board/intel/scc/target_skeleton/etc/fstab
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/fstab	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/fstab	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/fstab	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,9 @@
 +# /etc/fstab: static file system information.
 +#
@@ -2875,9 +2864,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/fstab build
 +tmpfs           /tmp           tmpfs    defaults          0      0
 +sysfs		/sys	       sysfs    defaults	  0	 0
 +rckhost:/shared	/shared	nfs	hard,intr,bg,rsize=4096,wsize=4096,nolock,tcp 0	0
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/group buildroot-2011.11/board/intel/scc/target_skeleton/etc/group
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/group	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/group	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/group	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,17 @@
 +root:x:0:
 +daemon:x:1:
@@ -2896,14 +2884,12 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/group build
 +nogroup:x:99:
 +users:x:100:
 +default:x:1000:
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/hostname buildroot-2011.11/board/intel/scc/target_skeleton/etc/hostname
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/hostname	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/hostname	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/hostname	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1 @@
 +sccLinux
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/hosts buildroot-2011.11/board/intel/scc/target_skeleton/etc/hosts
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/hosts	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/hosts	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/hosts	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,51 @@
 +127.0.0.1       localhost.localdomain   localhost
 +
@@ -2956,9 +2942,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/hosts build
 +192.168.0.47      rck46.in.rck.net rck46.rck rck46
 +192.168.0.48      rck47.in.rck.net rck47.rck rck47
 +
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/rcS buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/rcS
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/rcS	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/rcS	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/rcS	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,60 @@
 +#!/bin/sh
 +
@@ -3020,9 +3005,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/rcS 
 +  /usr/bin/stream_200KB_L2_n1000_x586 | grep "Solution Validates" >> /shared/bootTest/results/PID$core.log
 +  echo "%%%% That's it..." >> /shared/bootTest/results/PID$core.log
 +fi
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S01hotplug buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S01hotplug
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S01hotplug	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S01hotplug	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S01hotplug	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,14 @@
 +#! /bin/sh
 +
@@ -3038,9 +3022,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S01h
 +/sbin/mdev -s
 +trap - EXIT
 +echo "done"
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S02hostname buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S02hostname
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S02hostname	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S02hostname	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S02hostname	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,50 @@
 +#!/bin/sh
 +
@@ -3092,9 +3075,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S02h
 +esac
 +
 +exit $?
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S08syslog buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S08syslog
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S08syslog	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S08syslog	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S08syslog	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,24 @@
 +#!/bin/sh
 +
@@ -3120,9 +3102,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S08s
 +	echo "failed"
 +	exit 1
 +fi
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S09klog buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S09klog
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S09klog	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S09klog	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S09klog	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,16 @@
 +#!/bin/sh
 +
@@ -3140,9 +3121,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S09k
 +	echo "failed"
 +	exit 1
 +fi
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S20urandom buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S20urandom
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S20urandom	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S20urandom	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S20urandom	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,54 @@
 +#! /bin/sh
 +#
@@ -3198,9 +3178,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S20u
 +		exit 1
 +		;;
 +esac
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S40network buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S40network
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S40network	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S40network	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S40network	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,25 @@
 +#!/bin/sh
 +#
@@ -3227,9 +3206,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S40n
 +
 +exit $?
 +
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S41scc-network buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S41scc-network
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S41scc-network	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S41scc-network	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S41scc-network	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,113 @@
 +#!/bin/sh
 +
@@ -3344,17 +3322,15 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S41s
 +   echo `emactool host` "   rckhost.ex.rck.net rckhost.rck rckhost" >> /etc/hosts
 +   echo "nameserver " `emactool host` >> /etc/resolv.conf
 +fi
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S42mount buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S42mount
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S42mount	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S42mount	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S42mount	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,3 @@
 +#!/bin/sh
 +
 +mount -a
 \ No newline at end of file
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S45rhid buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S45rhid
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S45rhid	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S45rhid	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S45rhid	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,39 @@
 +#!/bin/sh
 +#
@@ -3395,9 +3371,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S45r
 +esac
 +
 +exit $?
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S55gpm buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S55gpm
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S55gpm	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S55gpm	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S55gpm	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,39 @@
 +#!/bin/sh
 +#
@@ -3438,9 +3413,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S55g
 +esac
 +
 +exit $?
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S60cpuutil buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S60cpuutil
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S60cpuutil	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S60cpuutil	2012-01-20 13:21:19.538262494 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/init.d/S60cpuutil	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,40 @@
 +#!/bin/sh
 +#
@@ -3482,9 +3456,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/init.d/S60c
 +esac
 +
 +exit $?
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/inittab buildroot-2011.11/board/intel/scc/target_skeleton/etc/inittab
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/inittab	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/inittab	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/inittab	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,26 @@
 +# /etc/inittab
 +#
@@ -3512,9 +3485,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/inittab bui
 +
 +# Set up a tty
 +tty1::respawn:-/bin/sh
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/inputrc buildroot-2011.11/board/intel/scc/target_skeleton/etc/inputrc
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/inputrc	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/inputrc	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/inputrc	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,44 @@
 +# /etc/inputrc - global inputrc for libreadline
 +# See readline(3readline) and `info readline' for more information.
@@ -3560,14 +3532,12 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/inputrc bui
 +"\eOF": end-of-line
 +"\eOH": beginning-of-line
 +
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/issue buildroot-2011.11/board/intel/scc/target_skeleton/etc/issue
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/issue	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/issue	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/issue	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1 @@
 +Welcome to SCC-Linux
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/mdev.conf buildroot-2011.11/board/intel/scc/target_skeleton/etc/mdev.conf
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/mdev.conf	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/mdev.conf	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/mdev.conf	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,49 @@
 +# mdev.conf for ATNGW100
 +#
@@ -3618,9 +3588,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/mdev.conf b
 +tty6.*	0:5	0660
 +
 +ttyS.*	0:20	640
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/memstat.conf buildroot-2011.11/board/intel/scc/target_skeleton/etc/memstat.conf
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/memstat.conf	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/memstat.conf	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/memstat.conf	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,14 @@
 +/dev
 +/bin
@@ -3637,9 +3606,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/memstat.con
 +/lib/libc5-compat
 +/usr/lib/libc5-compat
 \ No newline at end of file
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/mke2fs.conf buildroot-2011.11/board/intel/scc/target_skeleton/etc/mke2fs.conf
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/mke2fs.conf	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/mke2fs.conf	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/mke2fs.conf	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,44 @@
 +[defaults]
 +	base_features = sparse_super,filetype,resize_inode,dir_index,ext_attr
@@ -3685,16 +3653,14 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/mke2fs.conf
 +	     blocksize = 4096
 +	     inode_size = 128
 +	}
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/network/interfaces buildroot-2011.11/board/intel/scc/target_skeleton/etc/network/interfaces
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/network/interfaces	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/network/interfaces	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/network/interfaces	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,3 @@
 +# Configure Loopback
 +auto lo
 +iface lo inet loopback
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/passwd buildroot-2011.11/board/intel/scc/target_skeleton/etc/passwd
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/passwd	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/passwd	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/passwd	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,15 @@
 +root:x:0:0:root:/root:/bin/sh
 +daemon:x:1:1:daemon:/usr/sbin:/bin/sh
@@ -3711,9 +3677,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/passwd buil
 +nobody:x:99:99:nobody:/home:/bin/sh
 +sshd:x:103:99:Operator:/var:/bin/sh
 +default:x:1000:1000:Default non-root user:/home/default:/bin/sh
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/profile buildroot-2011.11/board/intel/scc/target_skeleton/etc/profile
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/profile	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/profile	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/profile	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,39 @@
 +# ~/.bashrc: executed by bash(1) for non-login interactive shells.
 +
@@ -3754,9 +3719,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/profile bui
 +    alias calc='calc -Cd '
 +    alias bc='calc -Cd '
 +fi;
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/protocols buildroot-2011.11/board/intel/scc/target_skeleton/etc/protocols
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/protocols	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/protocols	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/protocols	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,31 @@
 +# /etc/protocols:
 +# $Id: protocols,v 1.1 2004/10/09 02:49:18 andersen Exp $
@@ -3789,15 +3753,13 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/protocols b
 +ospf	89	OSPFIGP		# Open Shortest Path First IGP
 +ipip	94	IPIP		# Yet Another IP encapsulation
 +encap	98	ENCAP		# Yet Another IP encapsulation
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/resolv.conf buildroot-2011.11/board/intel/scc/target_skeleton/etc/resolv.conf
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/resolv.conf	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/resolv.conf	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/resolv.conf	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,2 @@
 +domain rck
 +search rck in.rck.net
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/securetty buildroot-2011.11/board/intel/scc/target_skeleton/etc/securetty
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/securetty	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/securetty	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/securetty	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,35 @@
 +tty1
 +tty2
@@ -3834,9 +3796,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/securetty b
 +ttymxc0
 +ttymxc1
 +ttymxc2
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/services buildroot-2011.11/board/intel/scc/target_skeleton/etc/services
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/services	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/services	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/services	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,302 @@
 +# /etc/services:
 +# $Id: services,v 1.1 2004/10/09 02:49:18 andersen Exp $
@@ -4140,9 +4101,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/services bu
 +
 +# Local services
 +
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/shadow buildroot-2011.11/board/intel/scc/target_skeleton/etc/shadow
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/shadow	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/shadow	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/shadow	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,12 @@
 +root::10933:0:99999:7:::
 +bin:*:10933:0:99999:7:::
@@ -4156,9 +4116,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/shadow buil
 +operator:*:10933:0:99999:7:::
 +nobody:*:10933:0:99999:7:::
 +default::10933:0:99999:7:::
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_config buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_config
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_config	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_config	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_config	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,47 @@
 +#	$OpenBSD: ssh_config,v 1.26 2010/01/11 01:39:46 dtucker Exp $
 +
@@ -4207,9 +4166,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_config 
 +#   PermitLocalCommand no
 +#   VisualHostKey no
 +#   ProxyCommand ssh -q -W %h:%p gateway.example.com
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/sshd_config buildroot-2011.11/board/intel/scc/target_skeleton/etc/sshd_config
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/sshd_config	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/sshd_config	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/sshd_config	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,118 @@
 +#	$OpenBSD: sshd_config,v 1.82 2010/09/06 17:10:19 naddy Exp $
 +
@@ -4329,9 +4287,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/sshd_config
 +#	X11Forwarding no
 +#	AllowTcpForwarding no
 +#	ForceCommand cvs server
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_dsa_key buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_dsa_key
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_dsa_key	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_dsa_key	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_dsa_key	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,12 @@
 +-----BEGIN DSA PRIVATE KEY-----
 +MIIBugIBAAKBgQCpqEkkbd/1SgfO607FHA/rQaU2oREhcjHevbXoQaL5sd1LLXBa
@@ -4345,34 +4302,28 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_ds
 +1QxHSXFXiYN5YkHtY26z2BI1RBFkddVy77TbGS5/suzq6pgZ8ZzmUQIUdnTZ0Qmh
 +I85RLPTDYvVrvnybM9Y=
 +-----END DSA PRIVATE KEY-----
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_dsa_key.pub buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_dsa_key.pub
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_dsa_key.pub	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_dsa_key.pub	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_dsa_key.pub	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1 @@
 +ssh-dss AAAAB3NzaC1kc3MAAACBAKmoSSRt3/VKB87rTsUcD+tBpTahESFyMd69tehBovmx3UstcFrrFnBwU0VIXpL1Bf4b/Qpwi/f+3JBM97lHce5Xyz5mCd5jvdF2n1L947iCgtlE4HNqoLdC1BbxhMzkOZWlCnMhWhtRPNPg7aBbF5Tk6TsgyjchYGuXn8SBItExAAAAFQDvcV5q4ReaIMcu909dO3M1Js8N8wAAAIAzs5hLP1sIDTZncnH6AmB1jfk24/Z5XNQQ91wvHOdygVWRBMcFYjiCcttC+Gbg3B+xuBelR5gqc4/ZpdKHuYYGZFAyv6IMSgNMIjIaTUKcHAyHIM1hnPOS8FrjFmM1Ei+PQq60AoFPReczFZSrFuK+InapsCD9RdiB5kxlCY5JvwAAAIBwK1jY7393FJ2j1I18bOSgCRFtv6SaN1HkyzGd8vjEhP8RVfjB+9fa+3sZI4IIXPvHWXmbdtfKfIc2CWzzOSDaqAvKRn0s++HT560Hs2Pt/YaItvQwagQf1QxHSXFXiYN5YkHtY26z2BI1RBFkddVy77TbGS5/suzq6pgZ8ZzmUQ== 
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_ecdsa_key buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_ecdsa_key
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_ecdsa_key	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_ecdsa_key	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_ecdsa_key	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,5 @@
 +-----BEGIN EC PRIVATE KEY-----
 +MHcCAQEEIPWLwRAUQf9C+SZHEPBBOd2qbDct3YDlpaczeSr66Sg0oAoGCCqGSM49
 +AwEHoUQDQgAENOwmnQDX5+jtg+MVQKHBEeV3eqf3c2xU52KC6aY3sYaSmG077gVf
 +7ROjyjFn7eEJ1Ld0r6fANm0N7VcgkxUk/g==
 +-----END EC PRIVATE KEY-----
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_ecdsa_key.pub buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_ecdsa_key.pub
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_ecdsa_key.pub	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_ecdsa_key.pub	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_ecdsa_key.pub	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1 @@
 +ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDTsJp0A1+fo7YPjFUChwRHld3qn93NsVOdigummN7GGkphtO+4FX+0To8oxZ+3hCdS3dK+nwDZtDe1XIJMVJP4= 
-Binary files buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_key and buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_key differ
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_key.pub buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_key.pub
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_key.pub	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_key.pub	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_key.pub	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1 @@
 +2048 65537 22612172734469514687200137122895553201220252575443552955261233369568430677494959410141477548662417980803077327909023172108852621351573323256369354623278854151985051114622381562625003314111717573760927160997249720393100913538656367395497472011117339372375187213714386263283024089967968265001628099787841390341562839083129066056485270388989949434730669281938579379193341030794703460914871539861545728168728575700855880992623025237011361844335902228707153927333641670123069285516558642234958339794316597717677588193691949539629430383936334493048353391585417602515859721518868380630260517298608335823289912319465044832741 
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_rsa_key buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_rsa_key
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_rsa_key	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_rsa_key	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_rsa_key	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,27 @@
 +-----BEGIN RSA PRIVATE KEY-----
 +MIIEowIBAAKCAQEA0+bVubmYxaFHo91QY4dSJDrIz4/RyNWPLnlmkQviTLlD9IWl
@@ -4401,19 +4352,16 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_rs
 +eWHmxaXOhNKog4+iKRqT6aaj9hmvXwQ5daqiN3CbT5MuDZihl3FQ08rEmChVYDVR
 +UNhljkRQHGov2ZHDS4Tp2Vy3l33jPuXXvwsIRpS64H/crfsoWmm3
 +-----END RSA PRIVATE KEY-----
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_rsa_key.pub buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_rsa_key.pub
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/ssh_host_rsa_key.pub	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_rsa_key.pub	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/ssh_host_rsa_key.pub	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1 @@
 +ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDT5tW5uZjFoUej3VBjh1IkOsjPj9HI1Y8ueWaRC+JMuUP0haWjE4AhuwLS+6r5CrVA1BQzPttdgPrumRAeqdWR/xNtBMviyMrpSe8xu9/vOWLEAD5zKyW3ZB1qaL3CaLLeFh7sA6sajFYseX0bXhlqOdSVyQIzlxxx7MNARgu/oAmWW05djo2BpZsXK6687oxH3lQJ9x4+XR0RQ7zpQ5A890s2J3QvbqSuYdurB8UpvMliyGoI31zY80aEWfz5wB022u3Lwwbsj+0ybAezWpJuHsfdnX9hIvNBjj/SvN9Zm8xUTPEUawdDlnZ9PuSZBsJcT6UKpbUZZNN+CuLjnwMV 
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/TZ buildroot-2011.11/board/intel/scc/target_skeleton/etc/TZ
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/etc/TZ	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/TZ	2012-01-20 13:18:17.938518805 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/etc/TZ	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1 @@
 +MST7MDT
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ashrc buildroot-2011.11/board/intel/scc/target_skeleton/root/.ashrc
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ashrc	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/root/.ashrc	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/root/.ashrc	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,16 @@
 +###########################
 +# Set system vars        #
@@ -4431,20 +4379,17 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ashrc bui
 +#alias ssh="ssh -i /root/.ssh/identity"
 +export SDL_NOMOUSE=1
 +
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ssh/authorized_keys buildroot-2011.11/board/intel/scc/target_skeleton/root/.ssh/authorized_keys
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ssh/authorized_keys	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/root/.ssh/authorized_keys	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/root/.ssh/authorized_keys	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,2 @@
 +ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgwCesdu3dLsnAlu6kES0l6tkWp/kH3Qq5LkLNlmbOxZ/yUsjS8O/x+zRIyMm7fUHKO7hF1vrzWuAOuD0hhP7VHwIob7S/NB+vI13zYbtQq5ZzGEfpjG2mKJIKn7w8OxEAPwePGfoQWgoPKzvauIG9O9+FidUkIK/WG6vJ3M/GLIwjGFv root@rckhost
 +ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAzN00GtafaJFTM4rQxh7sfUOd6hNweWm/lGUDae/k8QJPInbSvJAJH97ebludUUmVsNRKhCGElzl/9Ufi4wwy87EEwY/3OgTviZDSIr7goOkdW9Nbn85tEmIu7CAGg/MpKbp6iEnVyfOixVQuVzveU9E5nMHVYkF+CuLBZ+ZaOmDDL52XLGCkEOkCfnciDXA+8woSPOErYho+Jhtz0gHPopl6LBPEraAMI7e88C+EXJfP3x/yQsyHEW90vmh9ad7kMQTUH+rEeHMFLBvIC25nY12SbyWNWYsnV3u9TOU9Mb5Pms/0GkDVhWPJ3Tiw1INTeHI0fydwvEvTPcnMWD3Maw== root@rckhost
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ssh/identity.pub buildroot-2011.11/board/intel/scc/target_skeleton/root/.ssh/identity.pub
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ssh/identity.pub	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/root/.ssh/identity.pub	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/root/.ssh/identity.pub	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1 @@
 +ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgwCesdu3dLsnAlu6kES0l6tkWp/kH3Qq5LkLNlmbOxZ/yUsjS8O/x+zRIyMm7fUHKO7hF1vrzWuAOuD0hhP7VHwIob7S/NB+vI13zYbtQq5ZzGEfpjG2mKJIKn7w8OxEAPwePGfoQWgoPKzvauIG9O9+FidUkIK/WG6vJ3M/GLIwjGFv root@rckemu
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ssh/id_rsa buildroot-2011.11/board/intel/scc/target_skeleton/root/.ssh/id_rsa
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ssh/id_rsa	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/root/.ssh/id_rsa	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/root/.ssh/id_rsa	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,27 @@
 +-----BEGIN RSA PRIVATE KEY-----
 +MIIEogIBAAKCAQEAzN00GtafaJFTM4rQxh7sfUOd6hNweWm/lGUDae/k8QJPInbS
@@ -4473,9 +4418,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ssh/id_rs
 +5lXvho0hR3za79NxCASzujHMOg1cT8A8pMipywI/qaowvSH5UUw+iUlV85vX7E+a
 +PPxZDcVXjaiyBn7wuS2ZLeyY4Ml7P9OgHcuQt6C2eM/eR4/87Yw=
 +-----END RSA PRIVATE KEY-----
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ssh/known_hosts buildroot-2011.11/board/intel/scc/target_skeleton/root/.ssh/known_hosts
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ssh/known_hosts	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/root/.ssh/known_hosts	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/root/.ssh/known_hosts	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,48 @@
 +rck00,192.168.0.1 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDTsJp0A1+fo7YPjFUChwRHld3qn93NsVOdigummN7GGkphtO+4FX+0To8oxZ+3hCdS3dK+nwDZtDe1XIJMVJP4=
 +rck01,192.168.0.2 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDTsJp0A1+fo7YPjFUChwRHld3qn93NsVOdigummN7GGkphtO+4FX+0To8oxZ+3hCdS3dK+nwDZtDe1XIJMVJP4=
@@ -4525,15 +4469,13 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/root/.ssh/known
 +rck45,192.168.0.46 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDTsJp0A1+fo7YPjFUChwRHld3qn93NsVOdigummN7GGkphtO+4FX+0To8oxZ+3hCdS3dK+nwDZtDe1XIJMVJP4=
 +rck46,192.168.0.47 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDTsJp0A1+fo7YPjFUChwRHld3qn93NsVOdigummN7GGkphtO+4FX+0To8oxZ+3hCdS3dK+nwDZtDe1XIJMVJP4=
 +rck47,192.168.0.48 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDTsJp0A1+fo7YPjFUChwRHld3qn93NsVOdigummN7GGkphtO+4FX+0To8oxZ+3hCdS3dK+nwDZtDe1XIJMVJP4=
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/usr/bin/imaze buildroot-2011.11/board/intel/scc/target_skeleton/usr/bin/imaze
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/usr/bin/imaze	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/usr/bin/imaze	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/usr/bin/imaze	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,2 @@
 +#!/bin/sh
 +/usr/games/imaze -S /usr/share/games/imaze/sounds -H rck00
-diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/usr/bin/sccdsp buildroot-2011.11/board/intel/scc/target_skeleton/usr/bin/sccdsp
 --- buildroot-2011.11.orig/board/intel/scc/target_skeleton/usr/bin/sccdsp	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/board/intel/scc/target_skeleton/usr/bin/sccdsp	2012-01-20 13:18:17.950707740 +0100
++++ buildroot-2011.11/board/intel/scc/target_skeleton/usr/bin/sccdsp	2012-01-20 13:27:31.680707572 +0100
 @@ -0,0 +1,23 @@
 +#!/bin/sh
 +
@@ -4558,9 +4500,8 @@ diff -urN buildroot-2011.11.orig/board/intel/scc/target_skeleton/usr/bin/sccdsp 
 +export LD_PRELOAD
 +
 +exec "$@"
-diff -urN buildroot-2011.11.orig/boot/Config.in buildroot-2011.11/boot/Config.in
---- buildroot-2011.11.orig/boot/Config.in	2012-01-20 13:21:19.518240576 +0100
-+++ buildroot-2011.11/boot/Config.in	2012-01-20 13:21:19.538262494 +0100
+--- buildroot-2011.11.orig/boot/Config.in	2012-01-20 13:27:40.988260291 +0100
++++ buildroot-2011.11/boot/Config.in	2012-01-20 13:27:41.008263175 +0100
 @@ -6,6 +6,7 @@
  source "boot/uboot/Config.in"
  source "boot/at91bootstrap/Config.in"
@@ -4569,17 +4510,15 @@ diff -urN buildroot-2011.11.orig/boot/Config.in buildroot-2011.11/boot/Config.in
  source "boot/xloader/Config.in"
  
  endmenu
-diff -urN buildroot-2011.11.orig/boot/sccboot/Config.in buildroot-2011.11/boot/sccboot/Config.in
 --- buildroot-2011.11.orig/boot/sccboot/Config.in	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/boot/sccboot/Config.in	2012-01-20 13:21:19.538262494 +0100
++++ buildroot-2011.11/boot/sccboot/Config.in	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,4 @@
 +menuconfig BR2_TARGET_SCCBOOT
 +	bool "SCC Boot"
 +	help
 +	  The SCC bootloader.
-diff -urN buildroot-2011.11.orig/boot/sccboot/sccboot.mk buildroot-2011.11/boot/sccboot/sccboot.mk
 --- buildroot-2011.11.orig/boot/sccboot/sccboot.mk	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/boot/sccboot/sccboot.mk	2012-01-20 13:21:19.538262494 +0100
++++ buildroot-2011.11/boot/sccboot/sccboot.mk	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,43 @@
 +#############################################################
 +#
@@ -4624,9 +4563,8 @@ diff -urN buildroot-2011.11.orig/boot/sccboot/sccboot.mk buildroot-2011.11/boot/
 +ifeq ($(BR2_TARGET_SCCBOOT),y)
 +TARGETS+=sccboot
 +endif
-diff -urN buildroot-2011.11.orig/configs/scc_defconfig buildroot-2011.11/configs/scc_defconfig
 --- buildroot-2011.11.orig/configs/scc_defconfig	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/configs/scc_defconfig	2012-01-20 13:21:19.538262494 +0100
++++ buildroot-2011.11/configs/scc_defconfig	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,689 @@
 +#
 +# Automatically generated make config: don't edit
@@ -5317,9 +5255,8 @@ diff -urN buildroot-2011.11.orig/configs/scc_defconfig buildroot-2011.11/configs
 +#
 +# BR2_LINUX_KERNEL_EXT_XENOMAI is not set
 +# BR2_LINUX_KERNEL_EXT_RTAI is not set
-diff -urN buildroot-2011.11.orig/configs/sccDemo_defconfig buildroot-2011.11/configs/sccDemo_defconfig
 --- buildroot-2011.11.orig/configs/sccDemo_defconfig	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/configs/sccDemo_defconfig	2012-01-20 13:21:19.538262494 +0100
++++ buildroot-2011.11/configs/sccDemo_defconfig	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,719 @@
 +#
 +# Automatically generated make config: don't edit
@@ -6040,9 +5977,8 @@ diff -urN buildroot-2011.11.orig/configs/sccDemo_defconfig buildroot-2011.11/con
 +#
 +# BR2_LINUX_KERNEL_EXT_XENOMAI is not set
 +# BR2_LINUX_KERNEL_EXT_RTAI is not set
-diff -urN buildroot-2011.11.orig/fs/Config.in buildroot-2011.11/fs/Config.in
---- buildroot-2011.11.orig/fs/Config.in	2012-01-20 13:21:19.528253032 +0100
-+++ buildroot-2011.11/fs/Config.in	2012-01-20 13:21:19.538262494 +0100
+--- buildroot-2011.11.orig/fs/Config.in	2012-01-20 13:27:40.998267234 +0100
++++ buildroot-2011.11/fs/Config.in	2012-01-20 13:27:41.008263175 +0100
 @@ -11,5 +11,6 @@
  source "fs/iso9660/Config.in"
  source "fs/initramfs/Config.in"
@@ -6050,9 +5986,8 @@ diff -urN buildroot-2011.11.orig/fs/Config.in buildroot-2011.11/fs/Config.in
 +source "fs/sccfs/Config.in"
  
  endmenu
-diff -urN buildroot-2011.11.orig/fs/sccfs/Config.in buildroot-2011.11/fs/sccfs/Config.in
 --- buildroot-2011.11.orig/fs/sccfs/Config.in	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/fs/sccfs/Config.in	2012-01-20 13:21:19.538262494 +0100
++++ buildroot-2011.11/fs/sccfs/Config.in	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,18 @@
 +config BR2_TARGET_ROOTFS_SCCFS
 +	bool "scc image"
@@ -6072,9 +6007,8 @@ diff -urN buildroot-2011.11.orig/fs/sccfs/Config.in buildroot-2011.11/fs/sccfs/C
 +	help
 +	  Build a premerged bootable scc image (./selfboot/resource folder)
 +          Attention: Requires sourced sccKit (equal or higher V. 1.4.1)...
-diff -urN buildroot-2011.11.orig/fs/sccfs/sccfs.mk buildroot-2011.11/fs/sccfs/sccfs.mk
 --- buildroot-2011.11.orig/fs/sccfs/sccfs.mk	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/fs/sccfs/sccfs.mk	2012-01-20 13:21:19.538262494 +0100
++++ buildroot-2011.11/fs/sccfs/sccfs.mk	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,32 @@
 +SCCFS_TARGET_DIR=$(BUILD_DIR)/sccfs
 +SCCFS_OPTS:=
@@ -6108,15 +6042,13 @@ diff -urN buildroot-2011.11.orig/fs/sccfs/sccfs.mk buildroot-2011.11/fs/sccfs/sc
 +  endif
 +endif
 +
-diff -urN buildroot-2011.11.orig/images/commandline.bin buildroot-2011.11/images/commandline.bin
 --- buildroot-2011.11.orig/images/commandline.bin	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/images/commandline.bin	2012-01-20 13:21:19.538262494 +0100
++++ buildroot-2011.11/images/commandline.bin	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1 @@
 +                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 \ No newline at end of file
-diff -urN buildroot-2011.11.orig/package/Config.in buildroot-2011.11/package/Config.in
---- buildroot-2011.11.orig/package/Config.in	2012-01-20 13:21:19.478261866 +0100
-+++ buildroot-2011.11/package/Config.in	2012-01-20 13:21:19.538262494 +0100
+--- buildroot-2011.11.orig/package/Config.in	2012-01-20 13:27:40.948206779 +0100
++++ buildroot-2011.11/package/Config.in	2012-01-20 13:27:41.008263175 +0100
 @@ -501,6 +501,9 @@
  source "package/rtai/Config.in"
  endmenu
@@ -6127,9 +6059,8 @@ diff -urN buildroot-2011.11.orig/package/Config.in buildroot-2011.11/package/Con
  menu "Shell and utilities"
  source "package/at/Config.in"
  if BR2_PACKAGE_BUSYBOX_SHOW_OTHERS
-diff -urN buildroot-2011.11.orig/package/Config.in.orig buildroot-2011.11/package/Config.in.orig
 --- buildroot-2011.11.orig/package/Config.in.orig	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/Config.in.orig	2012-01-20 13:21:19.538262494 +0100
++++ buildroot-2011.11/package/Config.in.orig	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,554 @@
 +menu "Package Selection for the target"
 +
@@ -6685,9 +6616,8 @@ diff -urN buildroot-2011.11.orig/package/Config.in.orig buildroot-2011.11/packag
 +endmenu
 +
 +endmenu
-diff -urN buildroot-2011.11.orig/package/games/prboom/prboom.mk buildroot-2011.11/package/games/prboom/prboom.mk
---- buildroot-2011.11.orig/package/games/prboom/prboom.mk	2012-01-20 13:21:19.488260790 +0100
-+++ buildroot-2011.11/package/games/prboom/prboom.mk	2012-01-20 13:21:19.538262494 +0100
+--- buildroot-2011.11.orig/package/games/prboom/prboom.mk	2012-01-20 13:27:40.958265276 +0100
++++ buildroot-2011.11/package/games/prboom/prboom.mk	2012-01-20 13:27:41.008263175 +0100
 @@ -17,7 +17,8 @@
  		--with-sdl-exec-prefix=$(STAGING_DIR)/usr \
  		--disable-cpu-opt \
@@ -6698,9 +6628,8 @@ diff -urN buildroot-2011.11.orig/package/games/prboom/prboom.mk buildroot-2011.1
  
  # endianness detection isn't used when cross compiling
  define PRBOOM_BIG_ENDIAN_FIXUP
-diff -urN buildroot-2011.11.orig/package/links/Config.in buildroot-2011.11/package/links/Config.in
---- buildroot-2011.11.orig/package/links/Config.in	2012-01-20 13:21:19.478261866 +0100
-+++ buildroot-2011.11/package/links/Config.in	2012-01-20 13:21:19.538262494 +0100
+--- buildroot-2011.11.orig/package/links/Config.in	2012-01-20 13:27:40.948206779 +0100
++++ buildroot-2011.11/package/links/Config.in	2012-01-20 13:27:41.008263175 +0100
 @@ -6,9 +6,8 @@
  	  http://links.twibright.com/
  
@@ -6712,9 +6641,8 @@ diff -urN buildroot-2011.11.orig/package/links/Config.in buildroot-2011.11/packa
  	select BR2_PACKAGE_LIBPNG
  	help
  	  Enable graphics output.
-diff -urN buildroot-2011.11.orig/package/links/links.mk buildroot-2011.11/package/links/links.mk
---- buildroot-2011.11.orig/package/links/links.mk	2012-01-20 13:21:19.478261866 +0100
-+++ buildroot-2011.11/package/links/links.mk	2012-01-20 13:21:19.538262494 +0100
+--- buildroot-2011.11.orig/package/links/links.mk	2012-01-20 13:27:40.948206779 +0100
++++ buildroot-2011.11/package/links/links.mk	2012-01-20 13:27:41.008263175 +0100
 @@ -11,8 +11,11 @@
  
  ifeq ($(BR2_PACKAGE_LINKS_GRAPHICS),y)
@@ -6728,9 +6656,8 @@ diff -urN buildroot-2011.11.orig/package/links/links.mk buildroot-2011.11/packag
  ifeq ($(BR2_PACKAGE_JPEG),y)
  LINKS_DEPENDENCIES += jpeg
  endif
-diff -urN buildroot-2011.11.orig/package/multimedia/mplayer/mplayer.mk buildroot-2011.11/package/multimedia/mplayer/mplayer.mk
---- buildroot-2011.11.orig/package/multimedia/mplayer/mplayer.mk	2012-01-20 13:21:19.488260790 +0100
-+++ buildroot-2011.11/package/multimedia/mplayer/mplayer.mk	2012-01-20 13:21:19.538262494 +0100
+--- buildroot-2011.11.orig/package/multimedia/mplayer/mplayer.mk	2012-01-20 13:27:40.958265276 +0100
++++ buildroot-2011.11/package/multimedia/mplayer/mplayer.mk	2012-01-20 13:27:41.008263175 +0100
 @@ -134,6 +134,15 @@
  		$(MPLAYER_CONF_OPTS) \
  		--enable-cross-compile \
@@ -6747,9 +6674,8 @@ diff -urN buildroot-2011.11.orig/package/multimedia/mplayer/mplayer.mk buildroot
  		--enable-dynamic-plugins \
  	)
  endef
-diff -urN buildroot-2011.11.orig/package/multimedia/pulseaudio/pulseaudio-1.0-0001-mute.patch buildroot-2011.11/package/multimedia/pulseaudio/pulseaudio-1.0-0001-mute.patch
 --- buildroot-2011.11.orig/package/multimedia/pulseaudio/pulseaudio-1.0-0001-mute.patch	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/multimedia/pulseaudio/pulseaudio-1.0-0001-mute.patch	2012-01-20 13:21:19.538262494 +0100
++++ buildroot-2011.11/package/multimedia/pulseaudio/pulseaudio-1.0-0001-mute.patch	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,34 @@
 +diff -urN pulseaudio-1.0/src/utils/padsp.c pulseaudio-1.0-scc/src/utils/padsp.c
 +--- pulseaudio-1.0/src/utils/padsp.c	2011-09-01 10:36:46.000000000 +0200
@@ -6785,9 +6711,8 @@ diff -urN buildroot-2011.11.orig/package/multimedia/pulseaudio/pulseaudio-1.0-00
 +     if (i->play_precork) {
 +         flags |= PA_STREAM_START_CORKED;
 +         debug(DEBUG_LEVEL_NORMAL, __FILE__": creating stream corked\n");
-diff -urN buildroot-2011.11.orig/package/ncurses/ncurses.mk buildroot-2011.11/package/ncurses/ncurses.mk
---- buildroot-2011.11.orig/package/ncurses/ncurses.mk	2012-01-20 13:21:19.518240576 +0100
-+++ buildroot-2011.11/package/ncurses/ncurses.mk	2012-01-20 13:21:19.548264139 +0100
+--- buildroot-2011.11.orig/package/ncurses/ncurses.mk	2012-01-20 13:27:40.988260291 +0100
++++ buildroot-2011.11/package/ncurses/ncurses.mk	2012-01-20 13:27:41.008263175 +0100
 @@ -35,6 +35,7 @@
  	--without-ada \
  	--without-progs \
@@ -6796,9 +6721,8 @@ diff -urN buildroot-2011.11.orig/package/ncurses/ncurses.mk buildroot-2011.11/pa
  	--disable-big-core \
  	--without-profile \
  	--disable-rpath \
-diff -urN buildroot-2011.11.orig/package/scc/Config.in buildroot-2011.11/package/scc/Config.in
 --- buildroot-2011.11.orig/package/scc/Config.in	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/scc/Config.in	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/package/scc/Config.in	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,7 @@
 +menu "Single-chip cloud computer related applications"
 +source "package/scc/rhid/Config.in"
@@ -6807,18 +6731,16 @@ diff -urN buildroot-2011.11.orig/package/scc/Config.in buildroot-2011.11/package
 +source "package/scc/usbip/Config.in"
 +source "package/scc/imaze/Config.in"
 +endmenu
-diff -urN buildroot-2011.11.orig/package/scc/gpm/Config.in buildroot-2011.11/package/scc/gpm/Config.in
 --- buildroot-2011.11.orig/package/scc/gpm/Config.in	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/scc/gpm/Config.in	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/package/scc/gpm/Config.in	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,5 @@
 +config BR2_PACKAGE_GPM
 +	bool "gpm"
 +	help
 +	  Special GPM version patched to work with RHID.
 +	depends on BR2_PACKAGE_RHID
-diff -urN buildroot-2011.11.orig/package/scc/gpm/gpm.mk buildroot-2011.11/package/scc/gpm/gpm.mk
 --- buildroot-2011.11.orig/package/scc/gpm/gpm.mk	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/scc/gpm/gpm.mk	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/package/scc/gpm/gpm.mk	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,13 @@
 +#############################################################
 +#
@@ -6833,9 +6755,8 @@ diff -urN buildroot-2011.11.orig/package/scc/gpm/gpm.mk buildroot-2011.11/packag
 +GPM_INSTALL_TARGET = YES
 +
 +$(eval $(call AUTOTARGETS,package/scc,gpm))
-diff -urN buildroot-2011.11.orig/package/scc/imaze/Config.in buildroot-2011.11/package/scc/imaze/Config.in
 --- buildroot-2011.11.orig/package/scc/imaze/Config.in	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/scc/imaze/Config.in	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/package/scc/imaze/Config.in	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,6 @@
 +config BR2_PACKAGE_IMAZE
 +	bool "iMaze"
@@ -6843,9 +6764,8 @@ diff -urN buildroot-2011.11.orig/package/scc/imaze/Config.in buildroot-2011.11/p
 +        depends on BR2_PACKAGE_XLIB_LIBXAW
 +	help
 +	  iMaze is a simple multi-player network action game for TCP/IP with 3D graphics.
-diff -urN buildroot-2011.11.orig/package/scc/imaze/imaze.mk buildroot-2011.11/package/scc/imaze/imaze.mk
 --- buildroot-2011.11.orig/package/scc/imaze/imaze.mk	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/scc/imaze/imaze.mk	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/package/scc/imaze/imaze.mk	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,30 @@
 +#############################################################
 +#
@@ -6877,18 +6797,16 @@ diff -urN buildroot-2011.11.orig/package/scc/imaze/imaze.mk buildroot-2011.11/pa
 +endef
 +
 +$(eval $(call GENTARGETS,package/scc,imaze))
-diff -urN buildroot-2011.11.orig/package/scc/rhid/Config.in buildroot-2011.11/package/scc/rhid/Config.in
 --- buildroot-2011.11.orig/package/scc/rhid/Config.in	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/scc/rhid/Config.in	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/package/scc/rhid/Config.in	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,5 @@
 +config BR2_PACKAGE_RHID
 +	bool "rhid"
 +	help
 +	  Remote Human Interface Device (keyboard/mouse/sound via ethernet) for sccDisplay.
 +
-diff -urN buildroot-2011.11.orig/package/scc/rhid/rhid.mk buildroot-2011.11/package/scc/rhid/rhid.mk
 --- buildroot-2011.11.orig/package/scc/rhid/rhid.mk	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/scc/rhid/rhid.mk	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/package/scc/rhid/rhid.mk	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,20 @@
 +#############################################################
 +#
@@ -6910,18 +6828,16 @@ diff -urN buildroot-2011.11.orig/package/scc/rhid/rhid.mk buildroot-2011.11/pack
 +endef
 +
 +$(eval $(call GENTARGETS,package/scc,rhid))
-diff -urN buildroot-2011.11.orig/package/scc/sccapps/Config.in buildroot-2011.11/package/scc/sccapps/Config.in
 --- buildroot-2011.11.orig/package/scc/sccapps/Config.in	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/scc/sccapps/Config.in	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/package/scc/sccapps/Config.in	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,5 @@
 +config BR2_PACKAGE_SCCAPPS
 +	bool "SCCAPPS"
 +	help
 +	  Essential SCC Applications.
 +
-diff -urN buildroot-2011.11.orig/package/scc/sccapps/sccapps.mk buildroot-2011.11/package/scc/sccapps/sccapps.mk
 --- buildroot-2011.11.orig/package/scc/sccapps/sccapps.mk	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/scc/sccapps/sccapps.mk	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/package/scc/sccapps/sccapps.mk	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,30 @@
 +#############################################################
 +#
@@ -6953,23 +6869,20 @@ diff -urN buildroot-2011.11.orig/package/scc/sccapps/sccapps.mk buildroot-2011.1
 +endef
 +
 +$(eval $(call GENTARGETS,package/scc,sccapps))
-diff -urN buildroot-2011.11.orig/package/scc/scc.mk buildroot-2011.11/package/scc/scc.mk
 --- buildroot-2011.11.orig/package/scc/scc.mk	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/scc/scc.mk	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/package/scc/scc.mk	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1 @@
 +include package/scc/*/*.mk
-diff -urN buildroot-2011.11.orig/package/scc/usbip/Config.in buildroot-2011.11/package/scc/usbip/Config.in
 --- buildroot-2011.11.orig/package/scc/usbip/Config.in	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/scc/usbip/Config.in	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/package/scc/usbip/Config.in	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,5 @@
 +config BR2_PACKAGE_USBIP
 +	bool "USB-IP"
 +	help
 +	  USB over IP.
 +
-diff -urN buildroot-2011.11.orig/package/scc/usbip/usbip.mk buildroot-2011.11/package/scc/usbip/usbip.mk
 --- buildroot-2011.11.orig/package/scc/usbip/usbip.mk	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/package/scc/usbip/usbip.mk	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/package/scc/usbip/usbip.mk	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,15 @@
 +#############################################################
 +#
@@ -6986,9 +6899,8 @@ diff -urN buildroot-2011.11.orig/package/scc/usbip/usbip.mk buildroot-2011.11/pa
 +USBIP_INSTALL_TARGET = YES
 +
 +$(eval $(call AUTOTARGETS,package/scc,usbip))
-diff -urN buildroot-2011.11.orig/selfboot/fastBoot.mt buildroot-2011.11/selfboot/fastBoot.mt
 --- buildroot-2011.11.orig/selfboot/fastBoot.mt	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/selfboot/fastBoot.mt	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/selfboot/fastBoot.mt	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,49 @@
 +# pid mch-route mch-dest-id mch-offset-base testcase
 +0x00 0x00 6 0x00 ./fastBoot.obj
@@ -7039,9 +6951,8 @@ diff -urN buildroot-2011.11.orig/selfboot/fastBoot.mt buildroot-2011.11/selfboot
 +0x2d 0x25 4 0x09 ./fastBoot.obj
 +0x2e 0x25 4 0x0a ./fastBoot.obj
 +0x2f 0x25 4 0x0b ./fastBoot.obj
-diff -urN buildroot-2011.11.orig/selfboot/fastBoot.obj buildroot-2011.11/selfboot/fastBoot.obj
 --- buildroot-2011.11.orig/selfboot/fastBoot.obj	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/selfboot/fastBoot.obj	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/selfboot/fastBoot.obj	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,2885 @@
 +/origin 00000000
 +d88ec88c 801e010f 16010f18 01b81888
@@ -9928,15 +9839,13 @@ diff -urN buildroot-2011.11.orig/selfboot/fastBoot.obj buildroot-2011.11/selfboo
 +00000000 00000000 00000000 00000000
 +00f00de9 00000000 00000000 00000000
 +/eof
-diff -urN buildroot-2011.11.orig/selfboot/linux.mt buildroot-2011.11/selfboot/linux.mt
 --- buildroot-2011.11.orig/selfboot/linux.mt	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/selfboot/linux.mt	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/selfboot/linux.mt	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,2 @@
 +# pid mch-route mch-dest-id mch-offset-base testcase
 +0x00 0x00 6 0x00 resources/linux.obj
-diff -urN buildroot-2011.11.orig/selfboot/preMergeImage.csh buildroot-2011.11/selfboot/preMergeImage.csh
 --- buildroot-2011.11.orig/selfboot/preMergeImage.csh	1970-01-01 01:00:00.000000000 +0100
-+++ buildroot-2011.11/selfboot/preMergeImage.csh	2012-01-20 13:21:19.548264139 +0100
++++ buildroot-2011.11/selfboot/preMergeImage.csh	2012-01-20 13:27:41.008263175 +0100
 @@ -0,0 +1,32 @@
 +#!/bin/tcsh
 +
